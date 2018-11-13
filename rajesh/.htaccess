@@ -1,0 +1,14 @@
+RewriteEngine On
+ErrorDocument 404 /404.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^category/([0-9]+)/(.+)-([0-9]+)\.html$ category-list.php?id=$1 [PT,L,QSA]
+RewriteRule ^subcategory/([0-9]+)/(.+)-([0-9]+)\.html$ subcategory-list.php?id=$1 [PT,L,QSA]
+RewriteRule ^subcategory-all/([0-9]+)/(.+)-([0-9]+)\.html$ subcategory-all-list.php?id=$1 [PT,L,QSA]
+RewriteRule ^qad/([0-9]+)/(.+)-([0-9]+)\.html$ question-answer-details.php?id=$1 [PT,L,QSA]
+RewriteRule ^complain/([0-9]+)/(.+)-([0-9]+)\.html$ complain-full-details.php?id=$1 [PT,L,QSA]
+RewriteRule ^product/([0-9]+)/(.+)-([0-9]+)\.html$ product-view.php?id=$1 [PT,L,QSA]
+RewriteRule ^writereview/([0-9]+)/(.+)-([0-9]+)\.html$ review.php?id=$1 [PT,L,QSA]
+
+
+
